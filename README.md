@@ -43,4 +43,4 @@ This is the `ISO Date-Time format` for storing time: `YYYY-MM-DDTHH:MM:SS`.
 
 This commit is then pushed to GitHub (provided you already have made a repository) using `git push -u origin main -f`, and the directory is removed.
 
-GitHub recognizes the commit to have been created at `12am, 1st January, 1970` and thus registers a contribution at that moment in time. If you scroll to the first year on your profile, you will see there is a single contribution to your `1990` repository, on 1st January.
+GitHub recognizes the commit to have been created at `12am, 1st January, 1970` and thus registers a contribution at that moment in time. If you scroll to the first year on your profile, you will see there is a single contribution to your `1969` repository, on 1st January.

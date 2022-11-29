@@ -7,7 +7,7 @@
 ## Travel Back
 
 Run the following script and follow the prompts
-$```bash
+```bash
 sh -c "$(curl -fsSL https://raw.github.com/PickleNik/1969-script/master/index.sh)"
 ```
 **Step 0:** [Create a new repo](https://github.com/new) on GitHub.

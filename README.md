@@ -6,10 +6,10 @@
 
 ## Travel Back
 
-Run the following script and follow the prompts
+Copy index.sh content to your local, and run the shell (Time zone related, current is Beijing Time)
 
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/PickleNik/1969-script/master/index.sh)"
+```
+sh index.sh
 ```
 
 **Step 0:** [Create a new repo](https://github.com/new) on GitHub.
@@ -25,3 +25,17 @@ if you have SSH already setup locally, all you need is to copy your repo link an
 Otherwise, if you chose HTTPS, you will need to [Generate a personal access token](https://github.com/settings/tokens/new) on GitHub and copypaste it.
 
 Then enter you GitHub username and name of your new repository and you are done :)
+
+## Q&A:
+
+**1. Error occured: badDateOverflow: invalid author/committer line - date causes integer overflow**
+  - Make sure your time exceeds Unix time 1970-01-01T00:00:00Z
+  - Change index.sh content GIT_AUTHOR_DATE and GIT_COMMITTER_DATE to your local zone, for example Beijing time zone is +0800, so GIT_AUTHOR_DATE is "${YEAR}-01-01T08:00:00"
+
+**2. Commit succeeded but gitHub history didn't change**
+  - Your local Git commit email isn't connected to your github account, you must add the email address to your account on GitHub.
+  - Commit was made less than 24 hours ago
+  - More infomation here  [Common reasons that contributions are not counted](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile)
+
+**3. GitHub history changed but display unexpected when scroll**
+  - Select Activity overview mode then it will display smoothly when scroll ![image](https://user-images.githubusercontent.com/35559153/230754120-e5687f95-b3f7-48ca-aa2b-94601e2dac31.png)
